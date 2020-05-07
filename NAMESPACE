@@ -2,6 +2,8 @@
 
 export(minifyr_npm_install)
 export(minifyr_run)
+export(node_available)
+importFrom(attempt,warn_if)
 importFrom(fs,path_abs)
 importFrom(processx,run)
 importFrom(yesno,yesno)
