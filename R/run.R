@@ -14,16 +14,14 @@ minifyr_run <- function(
 ){
   input <- path_abs(input)
   output <- path_abs(output)
-  if (ok){
-    res <- run(
-      command = "node",
-      args = c(
-        "app.js",
-        input,
-        output
-      ),
-      wd = system.file("node", package = "minifyr")
-    )
-  }
-  invisible(res)
+  run(
+    command = "node",
+    args = c(
+      "app.js",
+      input,
+      output
+    ),
+    wd = system.file("node", package = "minifyr")
+  )
+  return(output)
 }
