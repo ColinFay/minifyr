@@ -1,0 +1,4 @@
+^minifyr\.Rproj$
+^\.Rproj\.user$
+^inst/node/node_modules$
+^README\.Rmd$
