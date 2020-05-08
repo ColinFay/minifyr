@@ -9,20 +9,7 @@
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 <!-- badges: end -->
 
-<style>
-.columnl {
-  float: left;
-  width: 30%;
-  padding: 1em;
-}
-.columnr {
-  float: left;
-  width: 80%;
-}
-
-</style>
-
-<div class="columnl">
+<div style="float: left;width: 30%; padding: 1em;">
 
 <img src = "inst/hex-minifyr.png"></img>
 
