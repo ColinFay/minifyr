@@ -7,7 +7,7 @@ output: github_document
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>",
+  comment = "",
   fig.path = "man/figures/README-",
   out.width = "100%"
 )
@@ -39,7 +39,7 @@ __NOTE: YOU WILL NEED NODEJS ON YOUR MACHINE__
 
 You'll need to run this once:
 
-```{r}
+```{r eval = FALSE}
 # Check node and npm are available
 minifyr::node_available()
 # Will install the node dependencies
@@ -74,3 +74,49 @@ For now, all the Node functions are called with their default arguments.
 ### Minify JSON
 
 + [jsonminify](https://github.com/babel/minify), with `minifyr_json_jsonminify()`
+
+### Example
+
+```{bash}
+echo "body {
+  margin: 25px;
+  background-color: rgb(240,240,240);
+  font-family: arial, sans-serif;
+  font-size: 14px;
+}" >> "test.css"
+```
+
+```{bash}
+cat test.css
+```
+
+```{r, include=FALSE}
+minifyr::minifyr_css_cleancss("test.css", "test2.css")
+```
+```{r, eval=FALSE}
+minifyr::minifyr_css_cleancss("test.css", "test2.css")
+```
+
+
+```{bash}
+cat test2.css
+```
+
+Note that all minifiers do not minify the same way
+
+```{r, include=FALSE}
+minifyr::minifyr_css_crass("test.css", "test3.css")
+```
+```{r, eval=FALSE}
+minifyr::minifyr_css_crass("test.css", "test3.css")
+```
+
+```{bash}
+cat test3.css
+```
+
+
+```{bash, echo=FALSE}
+rm test.css test2.css test3.css
+```
+
