@@ -64,7 +64,7 @@ minify_package_js <- function(
   recursive = TRUE,
   ...
 ){
-  minify_folder_css(
+  minify_folder_js(
     system.file(package = package),
     pattern = "\\.js$",
     fun = fun,
