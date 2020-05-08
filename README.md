@@ -9,12 +9,6 @@
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 <!-- badges: end -->
 
-<div style="float: left;width: 30%; padding: 1em;">
-
-<img src = "inst/hex-minifyr.png"></img>
-
-</div>
-
 The goal of `{minifyr}` is to provide a wrapper around the `node-minify`
 NodeJS module.
 
