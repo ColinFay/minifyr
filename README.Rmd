@@ -18,8 +18,26 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 <!-- badges: end -->
+<style>
+.columnl {
+  float: left;
+  width: 30%;
+  padding: 1em;
+}
+.columnr {
+  float: left;
+  width: 80%;
+}
+
+</style>
+
+<div class="columnl">
+<img src = "inst/hex-minifyr.png"></img>
+</div>
 
 The goal of `{minifyr}` is to provide a wrapper around the `node-minify` NodeJS module.
+
+This package bundles the whole NodeJS minifiers, so that they can be run from R. 
 
 More background info at: [colinfay.me/node-r-package/](https://colinfay.me/node-r-package/)
 
