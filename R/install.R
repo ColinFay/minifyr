@@ -24,4 +24,5 @@ minifyr_npm_install <- function(
       wd = system.file("node", package = "minifyr")
     )
   }
+  return(invisible(force))
 }

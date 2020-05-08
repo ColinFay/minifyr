@@ -1,5 +1,5 @@
 Package: minifyr
-Title: What the Package Does (One Line, Title Case)
+Title: Minify CSS, HTML and JavaScript Files
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Colin",
@@ -7,7 +7,8 @@ Authors@R:
            role = c("aut", "cre"),
            email = "contact@colinfay.me",
            comment = c(ORCID = "0000-0001-7343-1846"))
-Description: What the package does (one paragraph).
+Description: Wrapper around the node-minify NodeJS module.
+    This NodeJS module allows to minify HTML, CSS and JavaScript files.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
@@ -17,4 +18,7 @@ Imports:
     fs,
     processx,
     yesno,
-    attempt
+    attempt,
+    tools
+Suggests: 
+    testthat

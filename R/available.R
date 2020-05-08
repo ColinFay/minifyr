@@ -21,7 +21,7 @@ node_available <- function(){
       ignore.stderr = TRUE
     )
   )
-  message_if(
+  warn_if(
     test, ~ .x != 0, "Error launching Node"
   )
 }
