@@ -9,6 +9,16 @@
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 <!-- badges: end -->
 
+> Extremely high-speed network infrastructures are becoming more and
+> more popular in developed countries. However, we still face crowded
+> and low-speed Wi-Fi environments on airport, cafe, international
+> conference, etc. Especially, a network environment of mobile devices
+> requires efficient usage of network bandwidth.
+
+*Empirical Study on Effects of Script Minification and HTTP Compression
+for Traffic Reduction*,
+<http://www27.cs.kobe-u.ac.jp/achieve/data/pdf/1198.pdf>
+
 The goal of `{minifyr}` is to provide a wrapper around the `node-minify`
 NodeJS module.
 
