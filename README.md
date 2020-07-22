@@ -91,6 +91,25 @@ For now, all the Node functions are called with their default arguments.
   - [jsonminify](https://github.com/babel/minify), with
     `minifyr_json_jsonminify()`
 
+### Minifyr example
+
+minifyr comes with a series of examples:
+
+``` r
+library(minifyr)
+minifyr_example("css")
+[1] "/var/folders/5z/rm2h62lj45d332kfpj28c8zm0000gn/T//RtmpW8h6s4/file839381dce1d.css"
+minifyr_example("html")
+[1] "/var/folders/5z/rm2h62lj45d332kfpj28c8zm0000gn/T//RtmpW8h6s4/file8392cc6eeb3.html"
+minifyr_example("json")
+[1] "/var/folders/5z/rm2h62lj45d332kfpj28c8zm0000gn/T//RtmpW8h6s4/file839386140bc.json"
+minifyr_example("js")
+[1] "/var/folders/5z/rm2h62lj45d332kfpj28c8zm0000gn/T//RtmpW8h6s4/file83978e1138e.js"
+```
+
+Note that files are copied to a tempfile so that you don’t accidentally
+erase the original files.
+
 ### Example
 
 ``` bash

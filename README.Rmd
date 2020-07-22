@@ -81,6 +81,20 @@ For now, all the Node functions are called with their default arguments.
 
 + [jsonminify](https://github.com/babel/minify), with `minifyr_json_jsonminify()`
 
+### Minifyr example
+
+minifyr comes with a series of examples: 
+
+```{r}
+library(minifyr)
+minifyr_example("css")
+minifyr_example("html")
+minifyr_example("json")
+minifyr_example("js")
+```
+
+Note that files are copied to a tempfile so that you don't accidentally erase the original files.
+
 ### Example
 
 ```{bash}
@@ -99,6 +113,7 @@ cat test.css
 ```{r, include=FALSE}
 minifyr::minifyr_css_cleancss("test.css", "test2.css")
 ```
+
 ```{r, eval=FALSE}
 minifyr::minifyr_css_cleancss("test.css", "test2.css")
 ```
@@ -113,6 +128,7 @@ Note that all minifiers do not minify the same way
 ```{r, include=FALSE}
 minifyr::minifyr_css_crass("test.css", "test3.css")
 ```
+
 ```{r, eval=FALSE}
 minifyr::minifyr_css_crass("test.css", "test3.css")
 ```

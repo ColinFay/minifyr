@@ -5,6 +5,10 @@
 \alias{minify_package_css}
 \alias{minify_folder_js}
 \alias{minify_package_js}
+\alias{minify_folder_html}
+\alias{minify_package_html}
+\alias{minify_folder_json}
+\alias{minify_package_json}
 \title{Minifying folders}
 \usage{
 minify_folder_css(path, fun, recursive = TRUE, ...)
@@ -14,6 +18,14 @@ minify_package_css(package, fun, recursive = TRUE, ...)
 minify_folder_js(path, fun, recursive = TRUE, ...)
 
 minify_package_js(package, fun, recursive = TRUE, ...)
+
+minify_folder_html(path, fun, recursive = TRUE, ...)
+
+minify_package_html(package, fun, recursive = TRUE, ...)
+
+minify_folder_json(path, fun, recursive = TRUE, ...)
+
+minify_package_json(package, fun, recursive = TRUE, ...)
 }
 \arguments{
 \item{path}{Path to the folder containing files to minify}
@@ -27,7 +39,7 @@ minify_package_js(package, fun, recursive = TRUE, ...)
 \item{package}{Package containing files to minify}
 }
 \value{
-
+The minified path, invisibly.
 }
 \description{
 Minifying folders

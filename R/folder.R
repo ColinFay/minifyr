@@ -6,7 +6,7 @@
 #' @inheritParams base::list.files
 #' @param ... Parameters passed to `base::list.files()`
 #'
-#' @return
+#' @return The minified path, invisibly.
 #'
 #' @export
 #' @rdname minify-folders
@@ -72,6 +72,70 @@ minify_package_js <- function(
   )
 }
 
+#' @export
+#' @rdname minify-folders
+minify_folder_html <- function(
+  path,
+  fun,
+  recursive = TRUE,
+  ...
+){
+  minify_folder_(
+    path,
+    pattern = "\\.html$",
+    fun = fun,
+    recursive = recursive
+  )
+}
+
+#' @export
+#' @rdname minify-folders
+minify_package_html <- function(
+  package,
+  fun,
+  recursive = TRUE,
+  ...
+){
+  minify_folder_html(
+    system.file(package = package),
+    pattern = "\\.html$",
+    fun = fun,
+    recursive = recursive
+  )
+}
+
+#' @export
+#' @rdname minify-folders
+minify_folder_json <- function(
+  path,
+  fun,
+  recursive = TRUE,
+  ...
+){
+  minify_folder_(
+    path,
+    pattern = "\\.html$",
+    fun = fun,
+    recursive = recursive
+  )
+}
+
+#' @export
+#' @rdname minify-folders
+minify_package_json <- function(
+  package,
+  fun,
+  recursive = TRUE,
+  ...
+){
+  minify_folder_json(
+    system.file(package = package),
+    pattern = "\\.html$",
+    fun = fun,
+    recursive = recursive
+  )
+}
+
 #' @importFrom fs path_abs
 minify_folder_ <- function(
   path,
@@ -88,8 +152,10 @@ minify_folder_ <- function(
     ...
   )
   lapply(fls, function(x){
+    #browser()
       fun(x, x)
-      cat(basename(x), "minified ----\n")
+      cat(x, "minified ----\n")
     }
   )
+  invisible(path)
 }

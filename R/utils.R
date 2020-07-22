@@ -30,17 +30,33 @@ check_ext_ <- function(file, ext) {
     ~ .x == ext,
     sprintf("Wrong file extension: \n- Provided: %s\n- Expected: %s", file_ext_is, ext)
   )
+  TRUE
 }
 
+#' Verify the extension of a file
+#'
+#' @param file path to a file
+#'
+#' @return
+#' @export
+#' @rdname check
+#' @examples
+#' check_is_css("path/to/css")
 check_is_css <- function(file){
   check_ext_(file, "css")
 }
+#' @export
+#' @rdname check
 check_is_html <- function(file){
   check_ext_(file, "html")
 }
+#' @export
+#' @rdname check
 check_is_js <- function(file){
   check_ext_(file, "js")
 }
+#' @export
+#' @rdname check
 check_is_json <- function(file){
   check_ext_(file, "json")
 }
