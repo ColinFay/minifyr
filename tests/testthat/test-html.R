@@ -8,12 +8,11 @@ test_that("html minifying works", {
     fun in list(
       minifyr_html_minifier
     )
-  ){
+  ) {
     res <- minifyr_html_minifier(ipt, outpt)
     expect_exists(res)
     expect_nline(res, 1)
     expect_path(res, outpt)
     fs::file_delete(outpt)
   }
-
 })

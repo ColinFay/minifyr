@@ -3,7 +3,7 @@
 #' @return Warning if not available, nothing if available.
 #' @export
 #' @importFrom attempt warn_if
-node_available <- function(){
+node_available <- function() {
   test <- suppressWarnings(
     system(
       "npm -v",
@@ -12,7 +12,9 @@ node_available <- function(){
     )
   )
   warn_if(
-    test, ~ .x != 0, "Error launching npm"
+    test,
+    ~ .x != 0,
+    "Error launching npm"
   )
   test <- suppressWarnings(
     system(
@@ -22,6 +24,8 @@ node_available <- function(){
     )
   )
   warn_if(
-    test, ~ .x != 0, "Error launching Node"
+    test,
+    ~ .x != 0,
+    "Error launching Node"
   )
 }

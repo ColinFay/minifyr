@@ -18,7 +18,7 @@
 minifyr_json_jsonminify <- function(
   input,
   output
-){
+    ) {
   minifyr_json_(input, output, "default.js", "jsonminify")
 }
 
@@ -27,7 +27,7 @@ minifyr_json_ <- function(
   output,
   script,
   module = NULL
-){
+    ) {
   check_is_json(input)
   check_is_json(output)
   minifyr_c__(input, output, script, module)

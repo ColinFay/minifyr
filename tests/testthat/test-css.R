@@ -13,11 +13,10 @@ test_that("css minifying works", {
       minifyr_css_sqwish,
       minifyr_css_yui
     )
-  ){
+  ) {
     res <- fun(ipt, outpt)
     expect_nline(res, 1)
     expect_path(res, outpt)
     fs::file_delete(outpt)
   }
-
 })

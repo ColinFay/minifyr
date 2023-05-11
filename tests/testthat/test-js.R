@@ -11,7 +11,7 @@ test_that("js minifying works", {
       minifyr_js_uglify,
       minifyr_js_yui
     )
-  ){
+  ) {
     res <- fun(ipt, outpt)
     expect_exists(res)
     expect_nline(res, 1)
@@ -25,5 +25,4 @@ test_that("js minifying works", {
   expect_nline(res, 14)
   expect_path(res, outpt)
   fs::file_delete(outpt)
-
 })

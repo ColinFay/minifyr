@@ -8,8 +8,7 @@
 #' @examples
 #' minifyr_example("css")
 minifyr_example <- function(
-  ext = c("html", "js", "json", "css")
-){
+  ext = c("html", "js", "json", "css")) {
   match.arg(ext)
   fls <- tempfile(fileext = sprintf(".%s", ext))
   file.copy(
