@@ -17,11 +17,27 @@ minifyr_npm_install <- function(
   }
 
   if (ok) {
+    # Maybe the user has a custom location for the minifyr package
     sys_minifyr <- system.file(
       "node",
       package = "minifyr"
     )
+    # If the user has a custom location, copy the files there
+    # This is useful for deploying on a server (aka Connect that has
+    # a read-only file system by default)
+    if (Sys.getenv("MINIFYR_HOME") != sys_minifyr){
+      lapply(
+        list.files(sys_minifyr, full.names = TRUE),
+        function(x){
+          file.copy(
+            from = x,
+            to = file.path(Sys.getenv("MINIFYR_HOME"), basename(x))
+          )
+        }
+      )
+    }
     processx::run(
+      echo = TRUE,
       command = "npm",
       args = c("install"),
       wd = Sys.getenv("MINIFYR_HOME", sys_minifyr)
