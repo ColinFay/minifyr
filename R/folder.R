@@ -15,7 +15,7 @@ minify_folder_css <- function(
   fun,
   recursive = TRUE,
   ...
-){
+    ) {
   minify_folder_(
     path,
     pattern = "\\.css$",
@@ -31,7 +31,7 @@ minify_package_css <- function(
   fun,
   recursive = TRUE,
   ...
-){
+    ) {
   minify_folder_css(
     system.file(package = package),
     pattern = "\\.css$",
@@ -47,7 +47,7 @@ minify_folder_js <- function(
   fun,
   recursive = TRUE,
   ...
-){
+    ) {
   minify_folder_(
     path,
     pattern = "\\.js$",
@@ -63,7 +63,7 @@ minify_package_js <- function(
   fun,
   recursive = TRUE,
   ...
-){
+    ) {
   minify_folder_js(
     system.file(package = package),
     pattern = "\\.js$",
@@ -79,7 +79,7 @@ minify_folder_html <- function(
   fun,
   recursive = TRUE,
   ...
-){
+    ) {
   minify_folder_(
     path,
     pattern = "\\.html$",
@@ -95,7 +95,7 @@ minify_package_html <- function(
   fun,
   recursive = TRUE,
   ...
-){
+    ) {
   minify_folder_html(
     system.file(package = package),
     pattern = "\\.html$",
@@ -111,7 +111,7 @@ minify_folder_json <- function(
   fun,
   recursive = TRUE,
   ...
-){
+    ) {
   minify_folder_(
     path,
     pattern = "\\.html$",
@@ -127,7 +127,7 @@ minify_package_json <- function(
   fun,
   recursive = TRUE,
   ...
-){
+    ) {
   minify_folder_json(
     system.file(package = package),
     pattern = "\\.html$",
@@ -143,7 +143,7 @@ minify_folder_ <- function(
   fun,
   recursive,
   ...
-){
+    ) {
   fls <- list.files(
     path = fs::path_abs(path),
     pattern = pattern,
@@ -151,8 +151,10 @@ minify_folder_ <- function(
     full.names = TRUE,
     ...
   )
-  lapply(fls, function(x){
-    #browser()
+  lapply(
+    fls,
+    function(x) {
+      # browser()
       fun(x, x)
       cat(x, "minified ----\n")
     }

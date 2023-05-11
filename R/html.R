@@ -18,7 +18,7 @@
 minifyr_html_minifier <- function(
   input,
   output
-){
+    ) {
   minifyr_html_(input, output, "htmlminifier.js")
 }
 
@@ -27,7 +27,7 @@ minifyr_html_ <- function(
   output,
   script,
   module = NULL
-){
+    ) {
   check_is_html(input)
   check_is_html(output)
   minifyr_c__(input, output, script, module)

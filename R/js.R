@@ -22,7 +22,7 @@
 minifyr_js_babel <- function(
   input,
   output
-){
+    ) {
   minifyr_js_(input, output, "babelminify.js")
 }
 
@@ -31,7 +31,7 @@ minifyr_js_babel <- function(
 minifyr_js_gcc <- function(
   input,
   output
-){
+    ) {
   minifyr_js_(input, output, "gcc.js")
 }
 
@@ -40,7 +40,7 @@ minifyr_js_gcc <- function(
 minifyr_js_terser <- function(
   input,
   output
-){
+    ) {
   minifyr_js_(input, output, "terser.js")
 }
 
@@ -49,7 +49,7 @@ minifyr_js_terser <- function(
 minifyr_js_uglify <- function(
   input,
   output
-){
+    ) {
   minifyr_js_(input, output, "uglify.js")
 }
 #' @export
@@ -57,7 +57,7 @@ minifyr_js_uglify <- function(
 minifyr_js_yui <- function(
   input,
   output
-){
+    ) {
   minifyr_js_(input, output, "yui.js")
 }
 
@@ -66,10 +66,8 @@ minifyr_js_ <- function(
   output,
   script,
   module = NULL
-){
+    ) {
   check_is_js(input)
   check_is_js(output)
   minifyr_c__(input, output, script, module)
 }
-
-

@@ -23,7 +23,7 @@
 minifyr_css_cleancss <- function(
   input,
   output
-){
+    ) {
   minifyr_css_(input, output, "cleancss.js")
 }
 
@@ -32,7 +32,7 @@ minifyr_css_cleancss <- function(
 minifyr_css_crass <- function(
   input,
   output
-){
+    ) {
   minifyr_css_(input, output, "default.js", "crass")
 }
 
@@ -41,7 +41,7 @@ minifyr_css_crass <- function(
 minifyr_css_cssnano <- function(
   input,
   output
-){
+    ) {
   minifyr_css_(input, output, "default.js", "cssnano")
 }
 
@@ -50,7 +50,7 @@ minifyr_css_cssnano <- function(
 minifyr_css_csso <- function(
   input,
   output
-){
+    ) {
   minifyr_css_(input, output, "default.js", "csso")
 }
 
@@ -59,7 +59,7 @@ minifyr_css_csso <- function(
 minifyr_css_sqwish <- function(
   input,
   output
-){
+    ) {
   minifyr_css_(input, output, "sqwish.js")
 }
 
@@ -68,7 +68,7 @@ minifyr_css_sqwish <- function(
 minifyr_css_yui <- function(
   input,
   output
-){
+    ) {
   minifyr_css_(input, output, "yui.js")
 }
 
@@ -77,7 +77,7 @@ minifyr_css_ <- function(
   output,
   script,
   module = NULL
-){
+    ) {
   check_is_css(input)
   check_is_css(output)
   minifyr_c__(input, output, script, module)
