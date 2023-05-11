@@ -5,9 +5,13 @@ minifyr_c__ <- function(
   output,
   script,
   module = NULL
-){
+    ) {
   input <- path_abs(input)
   output <- path_abs(output)
+  sys_minifyr <- system.file(
+    "node",
+    package = "minifyr"
+  )
   run(
     command = "node",
     args = c(
@@ -16,7 +20,7 @@ minifyr_c__ <- function(
       output,
       module
     ),
-    wd = system.file("node", package = "minifyr")
+    wd = Sys.getenv("MINIFYR_HOME", sys_minifyr)
   )
   return(output)
 }
@@ -42,21 +46,21 @@ check_ext_ <- function(file, ext) {
 #' @rdname check
 #' @examples
 #' check_is_css("path/to/css")
-check_is_css <- function(file){
+check_is_css <- function(file) {
   check_ext_(file, "css")
 }
 #' @export
 #' @rdname check
-check_is_html <- function(file){
+check_is_html <- function(file) {
   check_ext_(file, "html")
 }
 #' @export
 #' @rdname check
-check_is_js <- function(file){
+check_is_js <- function(file) {
   check_ext_(file, "js")
 }
 #' @export
 #' @rdname check
-check_is_json <- function(file){
+check_is_json <- function(file) {
   check_ext_(file, "json")
 }
