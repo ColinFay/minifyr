@@ -13,6 +13,8 @@ minifyr_c__ <- function(
     package = "minifyr"
   )
   run(
+    echo = TRUE,
+    echo_cmd = TRUE,
     command = "node",
     args = c(
       script,
