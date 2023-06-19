@@ -3,3 +3,4 @@
 ^inst/node/node_modules$
 ^README\.Rmd$
 ^LICENSE\.md$
+^\.github$
