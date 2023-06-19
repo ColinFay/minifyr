@@ -44,11 +44,16 @@ check_ext_ <- function(file, ext) {
 #'
 #' @param file path to a file
 #'
-#' @return
+#' @return a boolean
 #' @export
 #' @rdname check
 #' @examples
-#' check_is_css("path/to/css")
+#' if (FALSE){
+#'   check_is_css("path/to/css")
+#'   check_is_html("path/to/html")
+#'   check_is_js("path/to/js")
+#'   check_is_json("path/to/json")
+#' }
 check_is_css <- function(file) {
   check_ext_(file, "css")
 }
